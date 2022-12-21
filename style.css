@@ -1,0 +1,72 @@
+body {
+    background-color: black;
+}
+
+.header-princ {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-bottom-left-radius: 100px;
+   
+}
+
+.header-wrapper {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-princ {
+    position: absolute;
+    z-index: -1;
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-login {
+    color: white;
+    background: none;
+    border: none;
+    padding: 0.5rem 1.8em 0.5rem 1.8rem;
+    border-radius: 20px; 
+}
+
+.btn-signIn {
+    color: hsl(353, 100%, 62%);
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 1.8em 0.5rem 1.8rem;
+    transition: 0.4s;
+}
+
+.btn-signIn:hover, .btn-start:hover {
+    color: white;
+    background-color: hsla(0, 0%, 100%, 0.226);
+
+}
+
+.btn-start {
+    color: hsl(353, 100%, 62%);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.2em 0.5rem 1.2rem;
+    transition: 0.4s;
+}
+
+.btn-learn {
+    color: white;
+    padding: 0.5rem 1.2em 0.5rem 1.2rem;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.btn-learn:hover {
+    color: hsl(353, 100%, 62%);
+    background-color: white;
+}
