@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 
 .header-princ {
     position: relative;
@@ -74,3 +77,40 @@
 .content-sec1 {
     margin-left: 15%;
 }
+
+.section2 {
+    position:relative;
+    background-image: linear-gradient(to right, hsl(237, 17%, 21%),  hsl(237, 23%, 32%));
+    border-radius: 0px 60px 0px 60px;
+}
+
+.content-wrapper-sec2 {
+    position:relative;
+    height: 25rem;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0;
+}
+
+.sec2-content {
+    position: absolute;
+    left: 65%;
+    bottom: 25%;
+}
+
+.bg-img-sec2 {
+    position: absolute;
+    z-index: -1;
+    bottom: 1px;
+    right: 45%;
+    object-fit: cover;
+}
+
+.phone-img-sec2 {
+    z-index: 2;
+    position: absolute;
+    bottom: -28%;
+    right: 45%;
+    object-fit: cover;
+}
+
