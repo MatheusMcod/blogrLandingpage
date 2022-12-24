@@ -114,3 +114,19 @@ body {
     object-fit: cover;
 }
 
+.footer-sec {
+    background-color: hsl(240, 10%, 16%);
+    border-radius: 0px 100px 0px 0px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+}
+
+.footer-link:hover {
+    color: hsl(240, 2%, 79%);
+    text-decoration: underline;
+}
+
+
