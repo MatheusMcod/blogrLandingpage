@@ -395,7 +395,12 @@ body {
 }
 
 @media(max-width:480px) {
-    .bar-links {
+    
+    .header-princ {
+            height: 65vh
+        }
+
+        .bar-links {
         left: 81%;
         width: 58%;
     }
@@ -421,9 +426,7 @@ body {
 }
 
 @media(max-width:355px) {
-    .header-princ {
-        height: 65vh
-    }
+    
     
     .phone-img-sec2 {
         bottom: 71%;
