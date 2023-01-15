@@ -12,6 +12,7 @@ body {
     width: 100vw;
     background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     border-bottom-left-radius: 100px;
+    overflow: hidden;
 }
 
 .header-wrapper {
@@ -23,12 +24,18 @@ body {
     font-weight: 300;
 }
 
+.bar-links {
+    justify-content: space-between;
+    width: 65%;
+}
+
 .bg-princ {
     position: absolute;
-    z-index: -1;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
+    right: 15px;
 }
 
 .header-content {
@@ -45,8 +52,65 @@ body {
     color: hsl(0, 0%, 100%);
 }
 
+.button-sandwich {
+    position: relative;
+    z-index: 10;
+    right: 8rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu {
+    left: 30%!important;
+    transition: 1s;
+}
+
+.show-menu .button-sandwich {
+   right: 2rem;
+   transition: 1s;
+}
+
+.line {
+    width: 1.8rem;
+    border-top: 2px solid hsl(0, 0%, 100%);
+}
+
+.line::after, .line::before { 
+    content: '';
+    display: block;
+    height: 2px;
+    width: 1.8rem;
+    margin-top: 5px;
+    background-color: hsl(0, 0%, 100%);
+    
+    position: relative;
+    transition: 1s;
+}
+
+.show-menu #line {
+    border-top: transparent;
+}
+
+.show-menu #line::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+.show-menu #line::before {
+    transform: rotate(135deg);
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.3rem, -.43rem);
+}
+
 .btn-login {
-    color: white;
+    color: hsl(0, 0%, 100%);
     background: none;
     border: none;
     padding: 0.5rem 1.8em 0.5rem 1.8rem;
@@ -62,7 +126,7 @@ body {
 }
 
 .btn-signIn:hover, .btn-start:hover {
-    color: white;
+    color: hsl(0, 0%, 100%);
     background-color: hsla(0, 0%, 100%, 0.226);
 
 }
@@ -76,7 +140,7 @@ body {
 }
 
 .btn-learn {
-    color: white;
+    color: hsl(0, 0%, 100%);
     padding: 0.5rem 1.2em 0.5rem 1.2rem;
     background: none;
     border: none;
@@ -86,7 +150,7 @@ body {
 
 .btn-learn:hover {
     color: hsl(353, 100%, 62%);
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .section1 h2{
@@ -96,7 +160,12 @@ body {
 }
 
 .content-sec1 {
-    margin-left: 15%;
+    width: 50%;
+    margin-left: 10%;
+}
+
+.content-sec1-text {
+    width: 75%;
 }
 
 .content-sec1 h3{
@@ -129,6 +198,7 @@ body {
     position: absolute;
     left: 65%;
     bottom: 25%;
+    width: 25%;
 }
 
 .sec2-content h2 {
@@ -192,6 +262,175 @@ body {
 .footer-link:hover {
     color: hsl(240, 2%, 79%);
     text-decoration: underline;
+}
+
+@media(max-width:830px) {
+    .bar-links {
+        width: 75%;
+    }
+}
+
+@media(max-width:769px) {
+    
+    .bar-links {
+        justify-content: flex-start;
+        position: relative;
+        z-index: 100;
+        width: 40%;
+        height: 30rem;
+        left: 65%;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        transition: 1s;
+    }
+
+    .btn-signIn {
+        background-color: hsl(353, 100%, 62%);
+        color: hsl(0, 0%, 100%);
+    }
+
+    .btn-signIn:hover {
+        background-color: hsl(353, 100%, 62%);
+        color: hsl(0, 0%, 100%);
+    }
+
+    .btn-login {
+        color: black;
+    }
+
+    .bar-links-content {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .bar-links div ul {
+        flex-direction: column;
+    }
+    
+    .bar-links a{
+        color: black!important;
+    }
+
+    .header-content {
+            position: relative;
+            bottom: 21rem;
+        }
+
+    .content-sec1 {
+        margin-left: 0%;
+    }
+
+    .content-sec1-text {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .content-sec1-text p {
+        width: 75%;
+    }
+
+    .section2 {
+       height: 100vw;
+       margin-top: 20rem;
+    }
+
+    .content-wrapper-sec2 {
+        height: 100%;
+        padding: 0rem;
+    }
+    
+    .sec2-content {
+        text-align: center;
+        width: 50%;
+        left: 30%;
+        bottom: 25%;
+    }
+
+    .bg-img-sec2 {
+        bottom: 80px;
+        right:-21%;
+    }
+    
+    .phone-img-sec2 {
+        bottom: 60%;
+        right: 14%;
+    }
+    
+    .content-sec3-text {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .content-sec3-text p {
+        width: 75%;
+    }
+}
+
+@media(max-width:650px) {
+
+     .sec2-content {
+         width: 60%;
+         left: 20%;
+         bottom: 10%;
+     }
+ 
+     .bg-img-sec2 {
+         width: 120%;
+         bottom: 120px;
+         right:-9%;
+     }
+     
+     .phone-img-sec2 {
+         width: 75%;
+         bottom: 60%;
+         right: 14%;
+     }
+
+    .footer-div-wrapper {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media(max-width:480px) {
+    .bar-links {
+        left: 81%;
+        width: 58%;
+    }
+
+    .header-content {
+        bottom: 22rem;
+    }
+    .show-menu {
+        left:10%!important;
+    }
+
+    .section2 {
+        height: 107vw;
+        margin-top: 12rem;
+     }
+    
+     .sec2-content {
+         width: 100%;
+         left: 0%;
+         bottom: 10%;
+     }
+ 
+}
+
+@media(max-width:355px) {
+
+    .phone-img-sec2 {
+        bottom: 71%;
+        right: 14%;
+    }
+
+    .sec2-content {
+        bottom: 5%;
+    }
+
 }
 
 
