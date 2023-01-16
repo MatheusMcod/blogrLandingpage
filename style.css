@@ -397,7 +397,7 @@ body {
 @media(max-width:480px) {
     
     .header-princ {
-            height: 65vh
+            height: 75vh
         }
 
         .bar-links {
@@ -406,7 +406,7 @@ body {
     }
 
     .header-content {
-        bottom: 22rem;
+        bottom: 19rem;
     }
     .show-menu {
         left:10%!important;
@@ -438,5 +438,10 @@ body {
     }
 
 }
+
+@media(max-width:280px) {
+    .phone-img-sec2 {
+        bottom: 85%;
+    }
 
 
